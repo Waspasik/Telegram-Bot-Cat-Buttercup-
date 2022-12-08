@@ -89,7 +89,7 @@ def get_user_text(message):
                         4: 'Лютик "Чахлы"', 5: 'Кустарный сцыкун', 6: 'Лютик "Полупокер"',
                         7: 'На раслабоне (полном)'}
         photo_number = datetime.now().isoweekday()
-        photo = open(f'D:/Python/Bot_Cat_Lutik/cat_photo/{str(photo_number)}.jpg', 'rb')
+        photo = open(f'D:/Python/Telegram_Bot_Cat_Lutik/cat_photo/{str(photo_number)}.jpg', 'rb')
         bot.send_photo(message.chat.id, photo)
         bot.send_message(message.chat.id, f'{datetime.now().strftime("%a %d.%m.%Y")} - "{photo_description[photo_number]}"')
 
@@ -109,11 +109,11 @@ def get_user_text(message):
 
     elif message.text.lower() == 'хочу мем':
         random_picture = randint(1, 18)
-        photo = open(f'D:/Python/Bot_Cat_Lutik/memes/mem{str(random_picture)}.jpg', 'rb')
+        photo = open(f'D:/Python/Telegram_Bot_Cat_Lutik/memes/mem{str(random_picture)}.jpg', 'rb')
         bot.send_photo(message.chat.id, photo)
         
     elif message.text.lower() == 'хочу анекдот':
-        with open('D:/Python/Bot_Cat_Lutik/jokes.txt', 'r', encoding='utf-8') as file:
+        with open('D:/Python/Telegram_Bot_Cat_Lutik/jokes.txt', 'r', encoding='utf-8') as file:
             bot.send_message(message.chat.id, get_joke(file.readlines()))
     
     elif message.text.lower() == 'я не виталик, я заблудился! не еби меня :с':
