@@ -34,7 +34,7 @@ def start_message(message):
 # Создаем кнопки, которые встречают нас при запуске бота
 def main_buttons(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
-    what_is_you_Lutik = types.KeyboardButton('Лютик этого дня', callback_data='unseen')
+    what_is_you_Lutik = types.KeyboardButton('Лютик этого дня')
     lutiks_quote = types.KeyboardButton('Цитата этого дня от Лютика')
     vitalik = types.KeyboardButton('Я Виталик и я хочу пор жать')
     markup.add(what_is_you_Lutik, lutiks_quote, vitalik)
